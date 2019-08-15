@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Jogador : MonoBehaviour
 {
-    public static float Velocidade =10.0f;
+    public static float Velocidade = 10.0f;
     public float HorizontalAxis;
     public new Rigidbody2D rigidbody;
     public Vector2 startPos;
@@ -32,13 +32,16 @@ public class Jogador : MonoBehaviour
                 case TouchPhase.Began:
                     // Record initial touch position.
                     startPos = toque.position;
-
                     break;
 
                 //Determine if the touch is a moving touch
                 case TouchPhase.Moved:
                     // Determine direction by comparing the current touch position with the initial one
-                    direction = toque.position - startPos;
+                    //direction = toque.position - startPos;
+                    if (startPos.x < Screen.width / 2 && transform.position.x > -1.75f)
+                        transform.position = new Vector2(transform.position.x - 1.75f, transform.position.y);
+                    if (startPos.x > Screen.width / 2 && transform.position.x < -1.75f)
+                        transform.position = new Vector2(transform.position.x + 1.75f, transform.position.y);
                     break;
 
                 case TouchPhase.Ended:
@@ -49,5 +52,5 @@ public class Jogador : MonoBehaviour
             }
         }
     }
-    
+
 }
