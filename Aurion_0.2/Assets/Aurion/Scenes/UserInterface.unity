@@ -1986,6 +1986,16 @@ PrefabInstance:
       propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2687659289355204078, guid: f990314bf06d3e448ba1957b07a43157,
+        type: 3}
+      propertyPath: newPanel
+      value: 
+      objectReference: {fileID: 678094249}
+    - target: {fileID: 2687659289355204078, guid: f990314bf06d3e448ba1957b07a43157,
+        type: 3}
+      propertyPath: oldPanel
+      value: 
+      objectReference: {fileID: 1342322767}
     - target: {fileID: 3337290935871068942, guid: f990314bf06d3e448ba1957b07a43157,
         type: 3}
       propertyPath: m_ShowMaskGraphic
