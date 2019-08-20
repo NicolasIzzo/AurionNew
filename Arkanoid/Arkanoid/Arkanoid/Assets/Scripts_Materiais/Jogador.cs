@@ -39,13 +39,14 @@ public class Jogador : MonoBehaviour
                 case TouchPhase.Moved:
                     // Determine direction by comparing the current touch position with the initial one
                     //direction = toque.position - startPos;
-                    if (startPos.x < Screen.width / 2 && transform.position.x > -1.75f)
+                    if (startPos.x < Screen.width / 2 || transform.position.x > -1.75f)
                     {
-                        direction.x = toque.position.x - startPos.x;
+                        direction.x = toque.deltaPosition.x;
+                        //direction.x = toque.position.x - startPos.x;
                         Barrinha.transform.position = new Vector2(direction.x,0);
                     }
-                    if (startPos.x > Screen.width / 2 && transform.position.x < -1.75f)
-                        transform.position = new Vector2(transform.position.x + 1.75f, transform.position.y);
+                    /*if (startPos.x > Screen.width / 2 && transform.position.x < -1.75f)
+                        transform.position = new Vector2(transform.position.x + 1.75f, transform.position.y);*/
                     break;
 
                 case TouchPhase.Ended:
