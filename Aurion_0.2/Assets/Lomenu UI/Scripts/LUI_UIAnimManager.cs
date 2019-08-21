@@ -29,7 +29,7 @@ public class LUI_UIAnimManager : MonoBehaviour {
 	{
         oldPanel.SetActive(false);
 		newPanel.SetActive(true);
-		//oldAnimator.Play(oldAnimText);
-		//newAnimator.Play(newAnimText);
+		/*oldAnimator.Play(oldAnimText);
+		newAnimator.Play(newAnimText);*/
 	}
 }
