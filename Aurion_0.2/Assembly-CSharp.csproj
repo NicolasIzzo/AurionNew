@@ -62,7 +62,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Include="Assets\Aurion\Script\Login.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
