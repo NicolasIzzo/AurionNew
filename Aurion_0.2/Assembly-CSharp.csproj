@@ -685,6 +685,7 @@
      <Compile Include="Assets\Aurion\Script\CameraController.cs" />
      <Compile Include="Assets\Aurion\Script\Login.cs" />
      <Compile Include="Assets\Aurion\Script\OpenSceneByString.cs" />
+     <Compile Include="Assets\Aurion\Script\PlaceholderControl.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
