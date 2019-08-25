@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Aurion/Scenes/UserInterface.unity
+    guid: d575e429501f15b4a9e258776527feef
+  - enabled: 1
+    path: Assets/Aurion/Scenes/QuizGame.unity
+    guid: d42fb9d3b8a9a8a4faf21a404e55754e
+  - enabled: 1
+    path: Assets/Aurion/Scenes/FlappyBird.unity
+    guid: dec79b069190ec44398b706d043f78cb
   m_configObjects: {}
