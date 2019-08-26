@@ -19,6 +19,8 @@ ExportedObj/
 *.user
 *.userprefs
 *.pidb
+*.log
+*.cache
 *.booproj
 *.svd
 *.pdb
