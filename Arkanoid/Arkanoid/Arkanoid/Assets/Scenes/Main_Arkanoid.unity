@@ -3974,7 +3974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HorizontalAxis: 0
-  rigidbody: {fileID: 0}
+  rigidbody: {fileID: 1276239287}
   startPos: {x: 0, y: 0}
   direction: {x: 0, y: 0}
   posicao: {x: 0, y: 0}
