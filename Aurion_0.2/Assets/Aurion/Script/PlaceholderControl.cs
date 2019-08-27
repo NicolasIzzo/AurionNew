@@ -15,5 +15,6 @@ public class PlaceholderControl : MonoBehaviour
     public void TaskOnSelect(string ae)
     {
           txt.placeholder.GetComponent<TMPro.TMP_Text>().text = "";
+          txt.text ="";
     }
 }

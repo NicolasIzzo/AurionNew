@@ -287,18 +287,6 @@
  <Reference Include="UnityEditor.UWP.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="Mono.Data">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/SQLite/Plugins/Mono.Data.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data.Sqlite">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/SQLite/Plugins/Mono.Data.Sqlite.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data.SqliteClient 1">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/SQLite/Plugins/Mono.Data.SqliteClient 1.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data.SqliteClient">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/SQLite/Plugins/Mono.Data.SqliteClient.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -313,6 +301,18 @@
  </Reference>
  <Reference Include="UnityEditor.Purchasing">
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.SqliteClient 1">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.SqliteClient 1.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.Sqlite">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.Sqlite.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.SqliteClient">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.SqliteClient.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
