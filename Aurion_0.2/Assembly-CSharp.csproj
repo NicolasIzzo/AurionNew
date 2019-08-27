@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
      <Compile Include="Assets\Aurion\Script\FlappyBird.cs" />
      <Compile Include="Assets\Aurion\Script\Login.cs" />
 =======
@@ -686,11 +687,18 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
 =======
+=======
+     <Compile Include="Assets\Aurion\Script\buttonControler.cs" />
+>>>>>>> UI-and-QUIZ
      <Compile Include="Assets\Aurion\Script\CameraController.cs" />
      <Compile Include="Assets\Aurion\Script\Login.cs" />
      <Compile Include="Assets\Aurion\Script\OpenSceneByString.cs" />
      <Compile Include="Assets\Aurion\Script\PlaceholderControl.cs" />
+<<<<<<< HEAD
 >>>>>>> master
+=======
+     <Compile Include="Assets\Aurion\Script\SQLite.cs" />
+>>>>>>> UI-and-QUIZ
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -725,7 +733,12 @@
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+     <Compile Include="Assets\csv\Scripts\csv.cs" />
+     <Compile Include="Assets\csv\Scripts\salva.cs" />
+>>>>>>> UI-and-QUIZ
      <Compile Include="Assets\Flappy Bird Style\Scripts\Bird.cs" />
      <Compile Include="Assets\Flappy Bird Style\Scripts\Column.cs" />
      <Compile Include="Assets\Flappy Bird Style\Scripts\ColumnPool.cs" />
@@ -747,7 +760,6 @@
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_TiltWindow.cs" />
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_UIAnimManager.cs" />
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_Volume.cs" />
-     <Compile Include="Assets\SQLite\Scripts\SQLite.cs" />
      <None Include="Assets\Aurion\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Aurion\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
 <<<<<<< HEAD
@@ -1020,6 +1032,7 @@
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
+<<<<<<< HEAD
  <Reference Include="Mono.Data">
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/SQLite/Plugins/Mono.Data.dll</HintPath>
  </Reference>
@@ -1032,6 +1045,8 @@
  <Reference Include="Mono.Data.SqliteClient">
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/SQLite/Plugins/Mono.Data.SqliteClient.dll</HintPath>
  </Reference>
+>>>>>>> UI-and-QUIZ
+=======
 >>>>>>> UI-and-QUIZ
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
@@ -1046,6 +1061,18 @@
 =======
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
 >>>>>>> UI-and-QUIZ
+ </Reference>
+ <Reference Include="Mono.Data.SqliteClient 1">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.SqliteClient 1.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.Sqlite">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.Sqlite.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.SqliteClient">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.SqliteClient.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
