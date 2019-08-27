@@ -55,12 +55,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Aurion\Script\buttonControler.cs" />
-     <Compile Include="Assets\Aurion\Script\CameraController.cs" />
-     <Compile Include="Assets\Aurion\Script\Login.cs" />
-     <Compile Include="Assets\Aurion\Script\OpenSceneByString.cs" />
-     <Compile Include="Assets\Aurion\Script\PlaceholderControl.cs" />
-     <Compile Include="Assets\Aurion\Script\SQLite.cs" />
+     <Compile Include="Assets\Aurion\Scripts\buttonControler.cs" />
+     <Compile Include="Assets\Aurion\Scripts\CameraController.cs" />
+     <Compile Include="Assets\Aurion\Scripts\Login.cs" />
+     <Compile Include="Assets\Aurion\Scripts\OpenSceneByString.cs" />
+     <Compile Include="Assets\Aurion\Scripts\PlaceholderControl.cs" />
+     <Compile Include="Assets\Aurion\Scripts\SQLite.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\Aurion\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -112,7 +112,6 @@
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_PanelAnim.cs" />
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_PressAnyKey.cs" />
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_Quality.cs" />
-     <Compile Include="Assets\Lomenu UI\Scripts\LUI_RotateObject.cs" />
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_TiltWindow.cs" />
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_UIAnimManager.cs" />
      <Compile Include="Assets\Lomenu UI\Scripts\LUI_Volume.cs" />
@@ -340,6 +339,12 @@
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
+ <Reference Include="Mono.Data">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/Plugins/Mono.Data.dll</HintPath>
+ </Reference>
+ <Reference Include="Mono.Data.Sqlite">
+ <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/Plugins/Mono.Data.Sqlite.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.Editor">
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
@@ -348,18 +353,6 @@
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
  <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data.SqliteClient 1">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.SqliteClient 1.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data.Sqlite">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.Sqlite.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data.SqliteClient">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.SqliteClient.dll</HintPath>
- </Reference>
- <Reference Include="Mono.Data">
- <HintPath>C:/Biosys/AurionNew/Aurion_0.2/Assets/StreamingAssets/Mono.Data.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.2f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
