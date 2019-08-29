@@ -10,10 +10,6 @@ using UnityEngine.Networking;
 using Mono.Data.Sqlite;
 public class SQLite : MonoBehaviour
 {
-    public TMPro.TMP_InputField txtnome, txtsenha;
-    public TMPro.TMP_Text lblnome; //colocar depois lblsenha e lblemail
-    string nome, senha;
-    public static int idusuario;
     
     //private static IDbConnection connection;
     public static IDataReader dr;
@@ -26,7 +22,7 @@ public class SQLite : MonoBehaviour
     IDbConnection dbConnection;
     IDbCommand dbCmd;
 
-    void Start()
+    public void Start()
     {
         
         if (Application.platform != RuntimePlatform.Android) {
@@ -57,21 +53,24 @@ public class SQLite : MonoBehaviour
         dbConnection.Close();
     }
 
-    public void Inserir()
+    public int Inserir(TMPro.TMP_InputField txtnome, TMPro.TMP_InputField txtsenha)
     {
+        int id_usuario = 0;
         try
         {
 
             dbConnection = new SqliteConnection(connectionString);
             dbConnection.Open();
             Debug.Log("Stablishing connection to: " + connectionString);
-            nome = txtnome.text.ToString();
-            senha = txtsenha.text.ToString();
+            string nome = txtnome.text.ToString();
+            string senha = txtsenha.text.ToString();
             dbCmd = dbConnection.CreateCommand();
             sqlQuery = String.Format("INSERT INTO usuario(name_user, senha_user) VALUES(\"{0}\",\"{1}\") ", nome, senha);
 
             dbCmd.CommandText = sqlQuery;
             dbCmd.ExecuteScalar();
+
+            id_usuario = Login(txtnome, txtsenha);
         }
         catch(Exception e)
         {
@@ -84,9 +83,11 @@ public class SQLite : MonoBehaviour
             dbConnection.Dispose();
         }
         
+        return id_usuario;
+        
     }
 
-    public void selectNome()
+    /* public void selectNome()
     {
         try
         {
@@ -118,18 +119,19 @@ public class SQLite : MonoBehaviour
             dbConnection.Dispose();
             dr.Close();
         }
-    }
+    }*/
 
-    public void Login()
+    public int Login(TMPro.TMP_InputField txtnome, TMPro.TMP_InputField txtsenha)
     {
+        int id_usuario = 0;
         try
         {
 
             dbConnection = new SqliteConnection(connectionString);
             dbConnection.Open();
             Debug.Log("Stablishing connection to: " + connectionString);
-            nome = txtnome.text.ToString();
-            senha = txtsenha.text.ToString();
+            string nome = txtnome.text.ToString();
+            string senha = txtsenha.text.ToString();
             dbCmd = dbConnection.CreateCommand();
             sqlQuery = String.Format("SELECT id_user FROM usuario WHERE name_user = \"{0}\" AND senha_user = \"{1}\" ", nome,senha);
 
@@ -141,7 +143,7 @@ public class SQLite : MonoBehaviour
                 Debug.Log("As informações conferem");
                 Debug.Log(dr.GetInt32(0));
             }
-                idusuario = dr.GetInt32(0);
+                id_usuario = dr.GetInt32(0);
                 
 
             
@@ -160,10 +162,15 @@ public class SQLite : MonoBehaviour
             txtnome.text = "Username";
             txtsenha.text = "Senha";
         }
+        return id_usuario;
     }
 
-    public void MostrarPerfil()
+    public string MostrarPerfil(int id_usu, int dado)
     {
+        string dado_return = "";
+        string nome = "";
+        string senha = "";
+        string pontuacao = "";
         try
         {
             
@@ -171,15 +178,16 @@ public class SQLite : MonoBehaviour
             dbConnection.Open();
             Debug.Log("Stablishing connection to: " + connectionString);
             dbCmd = dbConnection.CreateCommand();
-            sqlQuery = String.Format("SELECT name_user FROM usuario WHERE id_user = \"{0}\"", idusuario);
+            sqlQuery = String.Format("SELECT name_user, senha_user, pontuacao FROM usuario WHERE id_user = \"{0}\" ", id_usu);
 
             dbCmd.CommandText = sqlQuery;
-
             dr = dbCmd.ExecuteReader();
             while(dr.Read())
             {
-                lblnome.text = dr.GetString(0);
-                //lblsenha.text = dr.GetString(1);
+               Debug.Log("Entrou");
+               nome = dr.GetString(0);
+               senha = dr.GetString(1);
+               pontuacao = dr.GetInt32(2).ToString();
             }
 
             
@@ -194,46 +202,49 @@ public class SQLite : MonoBehaviour
             dbConnection.Close();
             dbConnection.Dispose();
             dr.Close();
-
         }
-    }
 
-    public void Delete()//Exclusão FÍSICA
+        switch(dado)
+        {
+            case 0:
+                dado_return = nome;
+                break;
+            case 1:
+                dado_return = senha;
+                break;
+            case 2:
+                dado_return = pontuacao;
+                break;
+        }
+        return dado_return;
+    }
+    
+
+    
+
+    public void Delete(int id_usu)//Exclusão FÍSICA
     {
         try
         {
-
             dbConnection = new SqliteConnection(connectionString);
             dbConnection.Open();
             Debug.Log("Stablishing connection to: " + connectionString);
-            nome = "Teemooo";
-            senha = "123";
             dbCmd = dbConnection.CreateCommand();
-            sqlQuery = String.Format("DELETE FROM usuario WHERE id_user = \"{0}\"", idusuario);
+            sqlQuery = String.Format("DELETE FROM usuario WHERE id_user = \"{0}\"", id_usu);
 
             dbCmd.CommandText = sqlQuery;
             dbCmd.ExecuteScalar();
         }
-        catch (Exception e)
-        {
-            Debug.Log(e.Message);
-
-        }
+        catch (Exception e){Debug.Log(e.Message);}
         finally
         {
             dbConnection.Close();
             dbConnection.Dispose();
         }
-
     }
 
-    public void UpdateUser()
+    public void AlterarUsuario(int id_usu, TMPro.TMP_Text lblnome, TMPro.TMP_Text lblsenha)
     {
-        int pontos = 100;
-        int id = 2;
-        nome = "Jacinto";
-        senha = "Bebas";
-
         try
         {
 
@@ -242,7 +253,7 @@ public class SQLite : MonoBehaviour
             Debug.Log("Stablishing connection to: " + connectionString);
            
             dbCmd = dbConnection.CreateCommand();
-            sqlQuery = String.Format("UPDATE usuario set name_user = \"{1}\", senha_user = \"{2}\", pontuacao = \"{3}\" WHERE id_user = \"{0}\"", id, nome, senha, pontos);
+            sqlQuery = String.Format("UPDATE usuario set name_user = \"{1}\", senha_user = \"{2}\" WHERE id_user = \"{0}\"", id_usu, lblnome.text, lblsenha.text);
 
             dbCmd.CommandText = sqlQuery;
             dbCmd.ExecuteScalar();
