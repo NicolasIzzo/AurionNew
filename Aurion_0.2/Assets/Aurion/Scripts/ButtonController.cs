@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
     public static int id_usuario = 0;
+  
+
     [Header("OBJECTS")]
 	public Button myButton;
     public TMPro.TMP_InputField txtnome;
@@ -18,12 +20,14 @@ public class ButtonController : MonoBehaviour
     public GameObject oldPanel;
 
     public SQLite banco;
+    public SliderManager sliderManager;
+    public PanelController panelController;
     
 
 
     void Start()
     {
-
+        
         Button btn = myButton.GetComponent<Button>();
         
         if(myButton.name =="btnLogin")
@@ -32,10 +36,13 @@ public class ButtonController : MonoBehaviour
             myButton.onClick.AddListener(Cadastrar);
         if(myButton.name =="btnPerfil")
             myButton.onClick.AddListener(MostrarPerfil);
-        if(myButton.name =="btnConfirmarAlterarcao")
+        if(myButton.name =="btnConfirmarAlteracao")
             myButton.onClick.AddListener(Alterar);
-        if(myButton.name =="btnSair")
+        if(myButton.name =="btnExit")
             myButton.onClick.AddListener(Sair);
+        if(myButton.name == "btnEditarPerfil")
+            myButton.onClick.AddListener(MostrarAlterarPerfil);
+
 
     
         
@@ -44,13 +51,16 @@ public class ButtonController : MonoBehaviour
     // Update is called once per frame
     void Login()
     {
+        
         id_usuario = banco.Login(txtnome, txtsenha);
         if(id_usuario > 0)
         {
-            TrocarPaineis();
+            newPanel.SetActive(true);
+            oldPanel.SetActive(false);
         }
         else
         {
+            sliderManager.CallPopup();
             Debug.Log("Erro no login, ButtonController");
         }
     }
@@ -59,30 +69,41 @@ public class ButtonController : MonoBehaviour
         id_usuario = banco.Inserir(txtnome, txtsenha);
         if(id_usuario > 0)
         {
-            TrocarPaineis();
+            newPanel.SetActive(true);
+            oldPanel.SetActive(false);
         }
         else
         {
+            sliderManager.CallPopup();
             Debug.Log("Erro no cadastro, ButtonController");
         }
     }
     void MostrarPerfil()
     {
-        TrocarPaineis();
+        newPanel.SetActive(true);
+        oldPanel.SetActive(false);
         lblnome.text = banco.MostrarPerfil(id_usuario, 0);
-        lblsenha.text = banco.MostrarPerfil(id_usuario, 1);
-        lblpontuacao.text = banco.MostrarPerfil(id_usuario, 2);
+        lblsenha.text = "Senha:" + banco.MostrarPerfil(id_usuario, 1);
+        lblpontuacao.text = "Pontuacao: " + banco.MostrarPerfil(id_usuario, 2);
         //lblresp.text = banco.MostrarPerfil(id_usuario, "respondidas");
+        lblresp.text = "Manutenção";
         
     }
 
     void Alterar()
     {
-        banco.AlterarUsuario(id_usuario, lblnome, lblsenha);
+        if(txtnome.text != "" && txtsenha.text != "")
+        {
+            banco.AlterarUsuario(id_usuario, txtnome.text, txtsenha.text);
+            sliderManager.CloseEditarPerfil();
+        }
+            
+        
     }
 
     void Sair()
-    {
+    {   
+        id_usuario = 0;
        /*if (Input.GetKeyUp(KeyCode.Escape))
         {
              if (Application.platform == RuntimePlatform.Android)
@@ -95,13 +116,24 @@ public class ButtonController : MonoBehaviour
                  Application.Quit();
              }
          }*/
-         TrocarPaineis();
-         id_usuario = 0;
+         txtsenha.text = "";
+         txtsenha.inputType = TMPro.TMP_InputField.InputType.Standard;
+         newPanel.SetActive(true);
+         oldPanel.SetActive(false);
+         
+    }
+    void MostrarAlterarPerfil()
+    {
+        
+        sliderManager.CallEditarPerfil();
+        txtnome.text = banco.MostrarPerfil(id_usuario, 0);
+        txtsenha.text = banco.MostrarPerfil(id_usuario, 1);
     }
 
-    void TrocarPaineis()
+    /*void TrocarPaineis()
     {
         oldPanel.SetActive(false);
+        
         newPanel.SetActive(true);
-    }
+    } */
 }

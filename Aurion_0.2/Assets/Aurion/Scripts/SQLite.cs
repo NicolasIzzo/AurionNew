@@ -243,7 +243,7 @@ public class SQLite : MonoBehaviour
         }
     }
 
-    public void AlterarUsuario(int id_usu, TMPro.TMP_Text lblnome, TMPro.TMP_Text lblsenha)
+    public void AlterarUsuario(int id_usu, string nome, string senha)
     {
         try
         {
@@ -253,7 +253,7 @@ public class SQLite : MonoBehaviour
             Debug.Log("Stablishing connection to: " + connectionString);
            
             dbCmd = dbConnection.CreateCommand();
-            sqlQuery = String.Format("UPDATE usuario set name_user = \"{1}\", senha_user = \"{2}\" WHERE id_user = \"{0}\"", id_usu, lblnome.text, lblsenha.text);
+            sqlQuery = String.Format("UPDATE usuario set name_user = \"{1}\", senha_user = \"{2}\" WHERE id_user = \"{0}\"", id_usu, nome, senha);
 
             dbCmd.CommandText = sqlQuery;
             dbCmd.ExecuteScalar();
