@@ -13761,8 +13761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myButton: {fileID: 1487172355}
-  txtnome: {fileID: 0}
-  txtsenha: {fileID: 0}
+  txtnome: {fileID: 485973797}
+  txtsenha: {fileID: 1243813455}
   lblnome: {fileID: 0}
   lblsenha: {fileID: 0}
   lblpontuacao: {fileID: 0}
