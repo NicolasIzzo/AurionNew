@@ -378,7 +378,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765672753}
+      - m_Target: {fileID: 0}
         m_MethodName: addEsquerda
         m_Mode: 1
         m_Arguments:
@@ -568,8 +568,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189907675}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.4, y: -3.252, z: 0.13455391}
-  m_LocalScale: {x: 1, y: 1.009, z: 1}
+  m_LocalPosition: {x: -6.239, y: -3.252, z: 0.13455391}
+  m_LocalScale: {x: 1.164, y: 1.009, z: 1}
   m_Children: []
   m_Father: {fileID: 729434452}
   m_RootOrder: 1
@@ -1887,8 +1887,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660920899}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.102, y: 0.712, z: 0}
-  m_LocalScale: {x: 1.069147, y: 1.023, z: 1}
+  m_LocalPosition: {x: 0.003, y: 0.449, z: 0}
+  m_LocalScale: {x: 1.1408483, y: 1.0952237, z: 1}
   m_Children: []
   m_Father: {fileID: 656473229}
   m_RootOrder: 0
@@ -2723,7 +2723,6 @@ GameObject:
   - component: {fileID: 765672752}
   - component: {fileID: 765672751}
   - component: {fileID: 765672750}
-  - component: {fileID: 765672753}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2812,23 +2811,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &765672753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765672748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4055b90e078e0914883c4467bdaa4434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HorizontalAxis: 0
-  rigidbody: {fileID: 0}
-  startPos: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  posicao: {x: 0, y: 0}
 --- !u!1001 &802103697
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6139,8 +6121,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000606533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.502, y: -3.224, z: 0.13455391}
-  m_LocalScale: {x: 1.164, y: 1.007, z: 1}
+  m_LocalPosition: {x: 4.158, y: -3.224, z: 0.13455391}
+  m_LocalScale: {x: 1.2920401, y: 1.007, z: 1}
   m_Children: []
   m_Father: {fileID: 729434452}
   m_RootOrder: 0
@@ -6853,7 +6835,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765672753}
+      - m_Target: {fileID: 0}
         m_MethodName: addDireita
         m_Mode: 1
         m_Arguments:
