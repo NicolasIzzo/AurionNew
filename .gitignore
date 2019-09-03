@@ -17,6 +17,10 @@ ExportedObj/
 *.suo
 *.tmp
 *.user
+*.ide-shm
+*.cache
+*.ide-wal
+*.ide
 *.userprefs
 *.pidb
 *.log
