@@ -28,10 +28,12 @@ ExportedObj/
 *.booproj
 *.svd
 *.pdb
+*.md.meta
 *.opendb
 *.asset
 *.info
 *.meta
+*.asset
 *.dll
 *.graph
 
