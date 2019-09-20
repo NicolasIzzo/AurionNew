@@ -8,6 +8,9 @@ public class Bot_Racket : MonoBehaviour
     private Vector2 vetorBot;
     private float speedBot = 0.0f;
     private Rigidbody2D rigido;
+    private Transform bot;
+    private Transform botMov;
+
 
     private Ball bola;
     
@@ -17,9 +20,6 @@ public class Bot_Racket : MonoBehaviour
         vetorBot = new Vector2();
         bola = new Ball();
     }
-    /*Vector2 screenPosition = Camera.main.WorldToScreenPoint(text.transform.position);
-Vector2 guiPosition = new Vector2(screenPosition.x / Screen.width, screenPosition.y / Screen.height);
-text.transform.position = GUIUtility.ScreenToGUIPoint(guiPosition);*/
 
     void Update()
     {
@@ -35,9 +35,13 @@ text.transform.position = GUIUtility.ScreenToGUIPoint(guiPosition);*/
             vetorBot.y -= speedBot;
             transform.Translate(Vector2.down * speedBot * Time.deltaTime);
         }*/
+        bot = GameObject.FindGameObjectWithTag("Bot").transform;
+       // botMov= bot.GetComponent<rigido>();
+
+
         while (true)
         {
-            rigido.transform.position = new Vector2(0, bola.dir.y);
+            bot.transform.position = new Vector2(0, bola.dir.y);
         }
 
     }
