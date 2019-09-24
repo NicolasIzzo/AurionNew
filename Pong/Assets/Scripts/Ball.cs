@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     public float speedBall;
     public Vector2 dir;
+    //private Bot_Racket bot;
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = Vector2.right * speedBall;
@@ -24,11 +25,17 @@ public class Ball : MonoBehaviour
             float y = hitFactor(transform.position, col.transform.position,
                 col.collider.bounds.size.y);
             dir = new Vector2(-1, y).normalized;
-            GetComponent<Rigidbody2D>().velocity = dir * speedBall;
+            GetComponent<Rigidbody2D>().velocity = dir * speedBall;      
       //  }
     }
+    private void Update()
+    {        
+    }
+
+
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketHeight)
-    {
+    {   
         return (ballPos.y - racketPos.y) / racketHeight;
+        
     }
 }

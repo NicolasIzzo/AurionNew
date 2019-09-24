@@ -13,36 +13,28 @@ public class Bot_Racket : MonoBehaviour
 
 
     private Ball bola;
-    
+
+
     void Start()
     {
-        rigido = GetComponent<Rigidbody2D>();
-        vetorBot = new Vector2();
+        //rigido = GetComponent<Rigidbody2D>();
+        //vetorBot = new Vector2();
         bola = new Ball();
+        bot = GameObject.FindGameObjectWithTag("Bot").transform;
+        speedBot = bola.dir.y;
+        bot.transform.position = new Vector2(-38,-13);
     }
 
     void Update()
-    {
-        /*speedBot = bola.dir.y;
-        if(bola.dir.y > 0)
-        {
-            vetorBot.y += speedBot;
-            //rigido = transform.position.y(speedBot);
-            transform.Translate(Vector2.up * speedBot * Time.deltaTime);// * Time.deltaTime
-        }
-        else
-        {
-            vetorBot.y -= speedBot;
-            transform.Translate(Vector2.down * speedBot * Time.deltaTime);
-        }*/
-        bot = GameObject.FindGameObjectWithTag("Bot").transform;
-       // botMov= bot.GetComponent<rigido>();
-
-
-        while (true)
-        {
-            bot.transform.position = new Vector2(0, bola.dir.y);
-        }
-
+    {       
+        mudaValor();
     }
+    private void mudaValor()
+    {        
+        bot.transform.position = new Vector2(-38, speedBot);
+    }
+    //conectar ccom o scriptda bla e lançar a função mudaValor no Ball.cs, lá rodá-la, e no update da Ball, conseguir faze a bola mexer.
+ 
+
+
 }

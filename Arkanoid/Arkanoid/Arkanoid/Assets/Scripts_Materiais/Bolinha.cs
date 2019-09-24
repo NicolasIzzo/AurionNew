@@ -8,9 +8,10 @@ public class Bolinha : MonoBehaviour
     public static Rigidbody2D rigido;
     void Start()
     {
-        Speed.x = 15;
-        Speed.y = 15;
-        
+        Speed.x = Random.Range(15,25);
+        Speed.y = Random.Range(15,25);
+        Debug.Log(Speed.x);
+        Debug.Log(Speed.y);
         rigido = GetComponent<Rigidbody2D>();
         //LINHA ORIGEM rigido.AddForce(new Vector2(10, 10); ////adiciona força em um vetor2 x e y
         rigido.AddForce(Speed);//adicionará somente o vetor e pelo unity regularemos a força, manualmente
@@ -29,6 +30,5 @@ public class Bolinha : MonoBehaviour
             rigido.AddForce(Speed);
         }*/
     }
-
-
+    
 }
