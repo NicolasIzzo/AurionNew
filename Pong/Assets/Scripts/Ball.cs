@@ -13,26 +13,12 @@ public class Ball : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D col)
     {
-        /*if(col.gameObject.name == "RacketLeft")
-        {
-            float y = hitFactor(transform.position, col.transform.position,
-                col.collider.bounds.size.y);
-            Vector2 dir = new Vector2(1, y).normalized;
-            GetComponent<Rigidbody2D>().velocity = dir * speedBall;
-        }*/
-        //if (col.gameObject.name == "RacketRight")
-    //    {
-            float y = hitFactor(transform.position, col.transform.position,
-                col.collider.bounds.size.y);
-            dir = new Vector2(-1, y).normalized;
-            GetComponent<Rigidbody2D>().velocity = dir * speedBall;      
-      //  }
+ 
+        float y = hitFactor(transform.position, col.transform.position,
+            col.collider.bounds.size.y);
+        dir = new Vector2(-1, y).normalized;
+        GetComponent<Rigidbody2D>().velocity = dir * speedBall;      
     }
-    private void Update()
-    {        
-    }
-
-
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketHeight)
     {   
         return (ballPos.y - racketPos.y) / racketHeight;
