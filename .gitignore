@@ -33,6 +33,7 @@ ExportedObj/
 *.asset
 *.info
 *.meta
+*.stamp
 *.asset
 *.dll
 *.graph

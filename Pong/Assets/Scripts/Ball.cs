@@ -21,7 +21,6 @@ public class Ball : MonoBehaviour
     }
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketHeight)
     {   
-        return (ballPos.y - racketPos.y) / racketHeight;
-        
+        return (ballPos.y - racketPos.y) / racketHeight;        
     }
 }
