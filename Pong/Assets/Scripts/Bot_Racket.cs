@@ -30,7 +30,7 @@ public class Bot_Racket : MonoBehaviour
     {
         tempo += (Time.deltaTime);
         mudaValor();
-        Debug.Log(tempo);
+        //Debug.Log(tempo);
         /*if (tempo <= 10f)
             dificuldade+=1;
         else if (tempo <= 15f && tempo > 10f)////////////////////////////////////
@@ -92,14 +92,140 @@ public class Bot_Racket : MonoBehaviour
             dificuldade++;
         else if (tempo <= 150f && tempo > 145f)
             dificuldade++;*/
-
-
-
-
-        if(dificuldade == 3)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        switch(dificuldade)
         {
-            bola.speedBall += 5f;
+            case 5:
+                bola.speedBall += 2f;
+                Debug.Log("1:"+dificuldade);
+                Debug.Log("B:" + bola.speedBall);
+                break;
+            case 10:
+                bola.speedBall += 2f;
+                Debug.Log("2:" + dificuldade);
+                break;
+            case 15:
+                bola.speedBall += 2f;
+                Debug.Log("3:" + dificuldade);
+                break;
+            case 20:
+                bola.speedBall += 2f;
+                Debug.Log("4:" + dificuldade);
+                break;
+            case 25:
+                bola.speedBall += 2f;
+                Debug.Log("5:" + dificuldade);
+                break;
+            case 30:
+                bola.speedBall += 2f;
+                Debug.Log("6:" + dificuldade);
+                break;
+            case 35:
+                bola.speedBall += 2f;
+                Debug.Log("7:" + dificuldade);
+                break;
+            case 40:
+                bola.speedBall += 2f;
+                Debug.Log("8:" + dificuldade);
+                break;
+            case 45:
+                bola.speedBall += 2f;
+                Debug.Log("9:" + dificuldade);
+                break;
+            case 50:
+                bola.speedBall += 2f;
+                Debug.Log("10:" + dificuldade);
+                break;
+            case 55:
+                bola.speedBall += 2f;
+                Debug.Log("11:" + dificuldade);
+                break;
+            case 60:
+                bola.speedBall += 2f;
+                Debug.Log("12:" + dificuldade);
+                break;
+            case 65:
+                bola.speedBall += 2f;
+                Debug.Log("13:" + dificuldade);
+                break;
+            case 70:
+                bola.speedBall += 2f;
+                Debug.Log("14:" + dificuldade);
+                break;
+            
+
         }
+
+
+        /*if(dificuldade == 5)
+        {
+            bola.speedBall += 2f;
+        }
+        else if(dificuldade == 10)
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == 15)
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == 20)
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == 25)
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall +=2f ;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }
+        else if (dificuldade == )
+        {
+            bola.speedBall += 2f;
+        }*/
+
 
     }
     private void mudaValor()
@@ -113,9 +239,9 @@ public class Bot_Racket : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {        
-        GameObject collider = collision.collider.gameObject;
+        GameObject collider = collision.collider.gameObject;        
+        Debug.Log("BateuRR");
         dificuldade++;
-        Debug.Log("Bateu");
     }
 
 }
