@@ -7,10 +7,10 @@ public class MoveRacketA : MonoBehaviour
     public static float speed = 30.0f;
     public string axis;
     
-    void FixedUpdate()
+    void Update()
     {
-        float v = Input.GetAxisRaw(axis);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, v) * speed;
+        float v2 = Input.GetAxisRaw(axis);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, v2) * speed;
     }
 
 }

@@ -1,40 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.IO;
+using System;
 public class Ball : MonoBehaviour
 {
-    public float speed;
-    // Start is called before the first frame update
+    public float speedBall;
+    public Vector2 dir;
+    private Bot_Racket bot;
+    public int inter;
     void Start()
     {
-        GetComponent<Rigidbody2D>().velocity = Vector2.right * speed;
+        GetComponent<Rigidbody2D>().velocity = Vector2.right * speedBall;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void OnCollisionEnter2D(Collision2D col)
     {
-        
+ 
+        float y = hitFactor(transform.position, col.transform.position,
+            col.collider.bounds.size.y);
+        dir = new Vector2(-1, y).normalized;
+        GetComponent<Rigidbody2D>().velocity = dir * speedBall;
+        inter = Integer.parseInt32(GetComponent<Rigidbody2D>().velocity);
+        //bot.dificuldade++;
+        //Debug.Log("BateuBB");
     }
-    void OnCollisionEnter2D(Collision2D col)
+    private void Update()
     {
-        if(col.gameObject.name == "RacketLeft")
-        {
-            float y = hitFactor(transform.position, col.transform.position,
-                col.collider.bounds.size.y);
-            Vector2 dir = new Vector2(1, y).normalized;
-            GetComponent<Rigidbody2D>().velocity = dir * speed;
-        }
-        if (col.gameObject.name == "RacketRight")
-        {
-            float y = hitFactor(transform.position, col.transform.position,
-                col.collider.bounds.size.y);
-            Vector2 dir = new Vector2(-1, y).normalized;
-            GetComponent<Rigidbody2D>().velocity = dir * speed;
-        }
+      //  GetComponent<Rigidbody2D>().velocity = dir * speedBall;
     }
     float hitFactor(Vector2 ballPos, Vector2 racketPos, float racketHeight)
-    {
-        return (ballPos.y - racketPos.y) / racketHeight;
+    {   
+        return (ballPos.y - racketPos.y) / racketHeight;        
     }
 }

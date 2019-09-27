@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Jogador : MonoBehaviour
 {
@@ -62,6 +63,13 @@ public class Jogador : MonoBehaviour
         if (Input.touchCount > 0)
         {
             rigidbody.velocity = new Vector2(-Velocidade, 0);
+        }
+    }
+    private void OnMouseDown()
+    {
+        if (Input.touchCount > 0)
+        {
+            Int32 aux = Convert.ToInt32(Velocidade);           
         }
     }
 
