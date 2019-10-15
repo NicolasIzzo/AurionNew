@@ -85,7 +85,7 @@ public class SQLite : MonoBehaviour
         
         return id_usuario;
         
-    }
+    }//salva no banco um novo cadastro
 
     /* public void selectNome()
     {

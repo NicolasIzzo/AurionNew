@@ -16,10 +16,10 @@ public class notaFinal : MonoBehaviour
     {
         idTema = PlayerPrefs.GetInt("idTema");
         notaF = PlayerPrefs.GetInt("notaFinalTemp"+idTema.ToString());
-        acertos = PlayerPrefs.GetInt("acertosTemp" + idTema.ToString());
+        acertos = PlayerPrefs.GetInt("acertosTemp" + idTema.ToString());//incializou componentes
 
-        txtNota.text = notaF.ToString();
-        txtInfoTema.text = "Você acertou " + acertos.ToString() + " de 15 perguntas";
+        txtNota.text = notaF.ToString();//converte em texto a nota obtida no questionario
+        txtInfoTema.text = "Você acertou " + acertos.ToString() + " de 15 perguntas";//pega o numero de acertos e os apresenta nas informações daquele tema
     }
 
     // Update is called once per frame

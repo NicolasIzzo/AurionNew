@@ -99,7 +99,7 @@ public class ButtonController : MonoBehaviour
         }
             
         
-    }
+    }//verifica se o novo nome e se a nova senha não são vazios, se não forem ele altera
 
     void Sair()
     {   
@@ -128,7 +128,7 @@ public class ButtonController : MonoBehaviour
         sliderManager.CallEditarPerfil();
         txtnome.text = banco.MostrarPerfil(id_usuario, 0);
         txtsenha.text = banco.MostrarPerfil(id_usuario, 1);
-    }
+    }//mostra a pagina para realizar a alteração
 
     /*void TrocarPaineis()
     {

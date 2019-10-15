@@ -6,6 +6,6 @@ public class ComandosBasicos : MonoBehaviour
 {
     public void carregaCena(string nomeCena)
     {
-        Application.LoadLevel(nomeCena);
+        Application.LoadLevel(nomeCena);//chama a cena
     }
 }

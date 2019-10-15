@@ -19,5 +19,5 @@ public class Login : MonoBehaviour
     {
         oldPanel.SetActive(false);
         newPanel.SetActive(true);
-    }
+    }//muda para o painel de logado se o botão for clicado
 }

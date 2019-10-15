@@ -44,5 +44,5 @@ public class salva : MonoBehaviour
 
             Debug.Log("Nome:" + partes[0] + "\n Dinheiro:" + partes[1]);
         //}
-    }
+    }//salva algo novo em camino/csv/bisys.csv e mostra
 }

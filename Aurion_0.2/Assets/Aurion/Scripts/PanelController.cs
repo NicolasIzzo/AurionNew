@@ -24,12 +24,12 @@ public class PanelController : MonoBehaviour
         pnlQuizTemas.SetActive(false);
         pnlSelecionarJogo.SetActive(false);
         pnlLogin.SetActive(true);
-    }
+    }//deixa apenas o painel do login
 
     public void TrocarPainel(string desativar, string ativar)
     {
         GameObject.Find(desativar).SetActive(false);
         GameObject.Find(ativar).SetActive(true);
-    }
+    }//muda os paineis ativados e desativados de acordo com o solicitado
 
 }

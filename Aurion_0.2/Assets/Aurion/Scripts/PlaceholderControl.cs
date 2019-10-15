@@ -33,17 +33,17 @@ public class PlaceholderControl : MonoBehaviour
     {
         txtsenha.placeholder.GetComponent<TMPro.TMP_Text>().text = "";
         txtsenha.text ="";
-    }
+    }//até aqui zerou os campos
     public void TaskSenhaOnValueChanged(string ae)
     {
         txtsenha.inputType = TMPro.TMP_InputField.InputType.Password;
-    }
+    }//recebeu o valor de password
 
     public void TaskOnDeselect(string ae)
     {
         if(txt.text == "")
             txt.placeholder.GetComponent<TMPro.TMP_Text>().text = "Username";
-    }
+    }//verifica se o username continuavazio, se sim ele atribui o valor da palavra username
 
     public void TaskSenhaOnDeselect(string ae)
     {
@@ -52,5 +52,5 @@ public class PlaceholderControl : MonoBehaviour
             txtsenha.inputType = TMPro.TMP_InputField.InputType.Standard;
             txtsenha.placeholder.GetComponent<TMPro.TMP_Text>().text = "Senha";
         }
-    }
+    }//checa se a senha esta vazia, se tiver ele atribui a ela a palavra senha 
 }

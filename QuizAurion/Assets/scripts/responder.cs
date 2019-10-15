@@ -12,14 +12,14 @@ public class responder : MonoBehaviour
     public Text respostaC;
     public Text respostaD;
     public Text respostaE;
-    public Text infoResp;
+    public Text infoResp;//estabelece genericamente os campos onde ficarão as respostas possiveis, o tema e a resposta correta
 
     public string[] perguntas;
     public string[] alternativaA;
     public string[] alternativaB;
     public string[] alternativaC;
     public string[] alternativaD;
-    public string[] alternativaE;
+    public string[] alternativaE;//estabelece a variavel que abrigara a pergunta  as respostas, que variam.
 
     public string[] corretas;
 
@@ -28,21 +28,21 @@ public class responder : MonoBehaviour
     private float acertos;
     private float questoes;
     private float media;
-    private int notaFinal;
+    private int notaFinal;//
 
     // Start is called before the first frame update
     void Start()
     {
-        idTema = PlayerPrefs.GetInt("idTema");
-        idPergunta = 0;
-        questoes = perguntas.Length;
-        pergunta.text = perguntas[idPergunta];
+        idTema = PlayerPrefs.GetInt("idTema"); //atribui a id tema o tema
+        idPergunta = 0;//pergunta começa em 0 e vai até o numero de questões dentro do tema
+        questoes = perguntas.Length;//numeroo de questões
+        pergunta.text = perguntas[idPergunta];//pega a pergunta do id atribuido
         respostaA.text = alternativaA[idPergunta];
         respostaB.text = alternativaB[idPergunta];
         respostaC.text = alternativaC[idPergunta];
         respostaD.text = alternativaD[idPergunta];
-        respostaE.text = alternativaE[idPergunta];
-        infoResp.text = "Respondendo " + (idPergunta + 1).ToString() + " de " + questoes.ToString() + " perguntas";
+        respostaE.text = alternativaE[idPergunta];//cria a alternativa, de A até E 
+        infoResp.text = "Respondendo " + (idPergunta + 1).ToString() + " de " + questoes.ToString() + " perguntas";//mostra em qual opergunta está
         
 
     }
@@ -98,7 +98,7 @@ public class responder : MonoBehaviour
 
    void proximaPergunta()
     {
-        idPergunta += 1;
+        idPergunta += 1;//almenta o indice da pergunta
 
         if (idPergunta <= (questoes - 1))
         {
@@ -109,7 +109,7 @@ public class responder : MonoBehaviour
             respostaD.text = alternativaD[idPergunta];
             respostaE.text = alternativaE[idPergunta];
             infoResp.text = "Respondendo " + (idPergunta + 1).ToString() + " de " + questoes.ToString() + " perguntas ";
-        }
+        }//atribui os novos campos se ainda houverem questões
 
         else
         {

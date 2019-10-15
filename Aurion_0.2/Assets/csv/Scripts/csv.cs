@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.IO;
@@ -14,7 +15,6 @@ public class csv : MonoBehaviour
     {
         caminho = Application.dataPath + "/biosys.csv";
         Debug.Log(caminho);
-
         salva = new StreamWriter(caminho, true);
 
         salva.WriteLine("felipe,200");
@@ -30,5 +30,5 @@ public class csv : MonoBehaviour
 
             Debug.Log("Nome:" + partes[0] + "\n Dinheiro:" + partes[1]);
         }
-    }
+    }//salva algo especifico em camino/biosys.csv e deposi mostra tudo que tem salvo ali
 }

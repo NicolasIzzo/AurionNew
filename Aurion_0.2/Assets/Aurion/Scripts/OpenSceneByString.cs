@@ -24,4 +24,4 @@ public class OpenSceneByString : MonoBehaviour
     {
         SceneManager.LoadScene(NameOfScene);
     }
-}
+}//mesma logica do login
